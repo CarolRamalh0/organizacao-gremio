@@ -1,0 +1,321 @@
+/* ============================================================
+   SISTEMA DE DESIGN – CSS BASE GLOBAL
+   Paleta oficial + tipografia + padrões + componentes
+=============================================================== */
+
+
+/* ----------------------------------
+   PALETA OFICIAL (DESIGN TOKENS)
+----------------------------------- */
+
+:root {
+    /* Primárias */
+    --petróleo: #1A2F4B;           /* Azul petróleo profundo */
+    --tecnológico: #3F6DA8;        /* Azul tecnológico médio */
+    --acinzentado: #7EA9D8;        /* Azul suave acinzentado */
+
+    /* Acentos */
+    --lilas: #C3B7FF;              /* Lilás suave inteligente */
+    --menta: #B8F0DE;              /* Verde menta futurista */
+
+    /* Neutros */
+    --cinza-claro: #F3F0F7;        /* Cinza quente claro */
+    --cinza-medio: #D8C5DE;        /* Cinza médio elegante */
+    --white: #FFFFFF;
+
+    /* Tipografia */
+    --font-main: 'Montserrat', sans-serif;
+
+    /* Textos */
+    --text-lg: 1.4rem;
+    --text-md: 1rem;
+    --text-sm: 0.9rem;
+
+    /* Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    /* Espaçamentos */
+    --space-xs: 6px;
+    --space-sm: 12px;
+    --space-md: 20px;
+    --space-lg: 32px;
+    --space-xl: 48px;
+
+    /* Sombra */
+    --shadow-sm: 0 3px 6px rgba(26, 47, 75, 0.10);
+    --shadow-md: 0 6px 14px rgba(26, 47, 75, 0.13);
+    --shadow-lg: 0 10px 26px rgba(26, 47, 75, 0.18);
+
+    /* Animação padrão */
+    --transition: 0.25s ease;
+}
+
+
+
+/* ----------------------------------
+   RESET + BASE
+----------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background: var(--cinza-claro);
+    color: var(--petróleo);
+    line-height: 1.45;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul { list-style: none; }
+
+
+
+/* ----------------------------------
+   LAYOUT BASE
+----------------------------------- */
+
+.container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    padding: var(--space-md) 0;
+}
+
+.section {
+    margin-bottom: var(--space-xl);
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--petróleo);
+    margin-bottom: var(--space-md);
+}
+
+
+
+/* ----------------------------------
+   NAVBAR
+----------------------------------- */
+
+.navbar {
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--tecnológico);
+}
+
+.navbar ul {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.navbar a {
+    font-weight: 600;
+    color: var(--petróleo);
+    padding: 6px 10px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
+.navbar a:hover {
+    background: var(--cinza-claro);
+}
+
+
+
+/* ----------------------------------
+   BOTÕES
+----------------------------------- */
+
+.btn {
+    display: inline-block;
+    padding: var(--space-sm) var(--space-md);
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+/* Primário */
+.btn-primary {
+    background: var(--tecnológico);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--petróleo);
+}
+
+/* Acento lilás */
+.btn-lilas {
+    background: var(--lilas);
+    color: var(--petróleo);
+}
+
+.btn-lilas:hover {
+    background: #b7aaff;
+}
+
+/* Outline */
+.btn-outline {
+    border: 2px solid var(--tecnológico);
+    color: var(--tecnológico);
+}
+
+.btn-outline:hover {
+    background: var(--tecnológico);
+    color: var(--white);
+}
+
+
+
+/* ----------------------------------
+   CARDS
+----------------------------------- */
+
+.card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--petróleo);
+    margin-bottom: var(--space-sm);
+}
+
+.card-body {
+    font-size: var(--text-md);
+    color: var(--tecnológico);
+}
+
+
+
+/* ----------------------------------
+   INPUTS / FORMS
+----------------------------------- */
+
+input, textarea, select {
+    width: 100%;
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+    border: 2px solid var(--cinza-medio);
+    background: var(--white);
+    font-family: var(--font-main);
+    color: var(--petróleo);
+    transition: var(--transition);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--tecnológico);
+    outline: none;
+}
+
+
+
+/* ----------------------------------
+   GRID SYSTEM
+----------------------------------- */
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+}
+
+
+
+/* ----------------------------------
+   UTILITÁRIOS
+----------------------------------- */
+
+.flex { display: flex; }
+.flex-between { display: flex; justify-content: space-between; align-items: center; }
+.flex-center { display: flex; justify-content: center; align-items: center; }
+
+.mt-sm { margin-top: var(--space-sm); }
+.mt-md { margin-top: var(--space-md); }
+.mt-lg { margin-top: var(--space-lg); }
+
+.mb-sm { margin-bottom: var(--space-sm); }
+.mb-md { margin-bottom: var(--space-md); }
+.mb-lg { margin-bottom: var(--space-lg); }
+
+
+
+/* ----------------------------------
+   RODAPÉ
+----------------------------------- */
+
+footer {
+    margin-top: var(--space-xl);
+    padding: var(--space-md);
+    background: var(--white);
+    text-align: center;
+    color: var(--petróleo);
+}
+
+
+
+/* ----------------------------------
+   RESPONSIVIDADE
+----------------------------------- */
+
+@media (max-width: 900px) {
+    .grid-3, .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-2, .grid-3, .grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
