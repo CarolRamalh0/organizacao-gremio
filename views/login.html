@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>L.I.G.A Grêmio Estudantil - Login</title>
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/css/login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L.I.G.A - Login</title>
+
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS BASE GLOBAL -->
+    <link rel="stylesheet" href="/css/base.css">
+
+    <!-- CSS ESPECÍFICO DA PÁGINA -->
+    <link href="/css/login.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <div class="left-section">
-      <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800" alt="Estudantes celebrando com pó colorido">
-      <div class="logo">
-        <h1>L.I.G.A</h1>
-        <h2>Grêmio Estudantil</h2>
-      </div>
-    </div>
-    <div class="right-section">
-      <h2 class="login-title">LOGIN</h2>
-      <form class="login-form">
-        <div class="form-group">
-          <input type="email" placeholder="Email" required>
+    <div class="login-container">
+
+        <!-- ÁREA ESQUERDA -->
+        <div class="area-esquerda">
+            <img src="/mnt/data/50cdfb93-937e-43a9-a367-e4219b01e819.png" alt="L.I.G.A Grêmio Estudantil" class="imagem-fundo">
+            
+            <div class="caixa-titulo">
+                <div class="linha1">L.I.G.A</div>
+                <div class="linha2">Grêmio Estudantil</div>
+            </div>
         </div>
-        <div class="form-group">
-          <input type="password" placeholder="Senha" required>
+
+        <!-- ÁREA DIREITA -->
+        <div class="area-direita">
+            <h1 class="titulo-login">LOGIN</h1>
+
+            <div class="cartao-login">
+                <div class="campo-input">
+                    <input type="email" placeholder="Email" id="email" required>
+                </div>
+
+                <div class="campo-input">
+                    <input type="password" placeholder="Senha" id="senha" required>
+                </div>
+
+                <button class="botao-entrar">Entrar</button>
+            </div>
         </div>
-        <button type="submit" class="btn-entrar">Entrar</button>
-      </form>
     </div>
-  </div>
 </body>
 </html>
