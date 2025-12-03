@@ -3,30 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L.I.G.A Grêmio Estudantil</title>
+    <title>L.I.G.A - Grêmio Estudantil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/integrantes.css">
 </head>
+
 <body>
-    <header class="header">
-        <div class="logo-section">
-            <div class="logo">L.I.G.A</div>
-            <div class="title">Grêmio Estudantil</div>
+
+    <!-- HEADER CUSTOMIZADO -->
+
+    <header class="header-custom">
+        <div class="logo-title">
+            <h1>L.I.G.A</h1>
+            <h2>Grêmio Estudantil</h2>
         </div>
-        <nav>
-            <ul class="nav-menu">
-                <li class="active"><a href="#integrantes">Integrantes</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#projetos-dia">Projetos dia-a-dia</a></li>
-                <li><a href="#tarefas">Minhas tarefas</a></li>
-            </ul>
+        
+        <nav class="nav-custom">
+            <a href="/views/integrantes.html"  class="active">Integrantes</a>
+            <a href="/views/projetos.html">Projetos</a>
+            <a href="/views/proj-dia.html">Projetos dia-a-dia</a>
+            <a href="/views/tarefas.html">Minhas tarefas</a>
         </nav>
     </header>
 
+    <!-- CONTEÚDO PRINCIPAL -->
     <main class="main-content">
-        <div class="grid-4 members-grid">
 
-            <div class="member-card">
+        <div class="integrantes-grid">
+
+            <!-- Repete o mesmo formato para cada card -->
+
+            <div class="integrante-card">
                 <div class="avatar"></div>
                 <div class="card-content">
                     <div class="cargo">Cargo</div>
@@ -35,7 +45,7 @@
                 </div>
             </div>
 
-            <div class="member-card">
+            <div class="integrante-card">
                 <div class="avatar"></div>
                 <div class="card-content">
                     <div class="cargo">Cargo</div>
@@ -44,7 +54,7 @@
                 </div>
             </div>
 
-            <div class="member-card">
+            <div class="integrante-card">
                 <div class="avatar"></div>
                 <div class="card-content">
                     <div class="cargo">Cargo</div>
@@ -53,7 +63,7 @@
                 </div>
             </div>
 
-            <div class="member-card">
+            <div class="integrante-card">
                 <div class="avatar"></div>
                 <div class="card-content">
                     <div class="cargo">Cargo</div>
@@ -62,7 +72,7 @@
                 </div>
             </div>
 
-            <div class="member-card">
+            <div class="integrante-card">
                 <div class="avatar"></div>
                 <div class="card-content">
                     <div class="cargo">Cargo</div>
@@ -71,7 +81,7 @@
                 </div>
             </div>
 
-            <div class="member-card">
+            <div class="integrante-card">
                 <div class="avatar"></div>
                 <div class="card-content">
                     <div class="cargo">Cargo</div>
@@ -80,7 +90,7 @@
                 </div>
             </div>
 
-            <div class="member-card">
+            <div class="integrante-card">
                 <div class="avatar"></div>
                 <div class="card-content">
                     <div class="cargo">Cargo</div>
@@ -89,7 +99,7 @@
                 </div>
             </div>
 
-            <div class="member-card">
+            <div class="integrante-card">
                 <div class="avatar"></div>
                 <div class="card-content">
                     <div class="cargo">Cargo</div>
@@ -99,6 +109,8 @@
             </div>
 
         </div>
+
     </main>
+
 </body>
 </html>

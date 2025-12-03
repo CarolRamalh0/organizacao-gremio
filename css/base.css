@@ -85,6 +85,56 @@ ul { list-style: none; }
 
 
 
+.header-custom {
+    width: 100%;
+    background: var(--petróleo);
+    padding: var(--space-md) var(--space-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
+}
+
+.logo-title {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.logo-title h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+}
+
+.logo-title h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+}
+
+.nav-custom {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+.nav-custom a {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--white);
+    padding-bottom: 4px;
+    position: relative;
+    transition: var(--transition);
+}
+
+.nav-custom a.active {
+    border-bottom: 2px solid var(--white);
+    border-radius: 2px;
+}
+
 /* ----------------------------------
    LAYOUT BASE
 ----------------------------------- */

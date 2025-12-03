@@ -1,29 +1,59 @@
+/* ============================================================
+   SISTEMA DE DESIGN – CSS BASE GLOBAL
+   Paleta oficial + tipografia + padrões + componentes
+=============================================================== */
+
+/* ----------------------------------
+   PALETA OFICIAL (DESIGN TOKENS)
+----------------------------------- */
+
 :root {
+    /* Primárias */
     --petróleo: #1A2F4B;
     --tecnológico: #3F6DA8;
     --acinzentado: #7EA9D8;
+
+    /* Acentos */
     --lilas: #C3B7FF;
     --menta: #B8F0DE;
+
+    /* Neutros */
     --cinza-claro: #F3F0F7;
     --cinza-medio: #D8C5DE;
     --white: #FFFFFF;
+
+    /* Tipografia */
     --font-main: 'Montserrat', sans-serif;
+
+    /* Textos */
     --text-lg: 1.4rem;
     --text-md: 1rem;
     --text-sm: 0.9rem;
+
+    /* Radius */
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 20px;
+
+    /* Espaçamentos */
     --space-xs: 6px;
     --space-sm: 12px;
     --space-md: 20px;
     --space-lg: 32px;
     --space-xl: 48px;
+
+    /* Sombra */
     --shadow-sm: 0 3px 6px rgba(26, 47, 75, 0.10);
     --shadow-md: 0 6px 14px rgba(26, 47, 75, 0.13);
     --shadow-lg: 0 10px 26px rgba(26, 47, 75, 0.18);
+
+    /* Animação padrão */
     --transition: 0.25s ease;
 }
+
+/* ----------------------------------
+   RESET + BASE
+----------------------------------- */
 
 * {
     margin: 0;
@@ -33,156 +63,144 @@
 
 body {
     font-family: var(--font-main);
-    //background: linear-gradient(180deg, #2C4A5E 0%, #1A2F4A 50%, #0F1F3D 100%);
     background: var(--cinza-claro);
-    min-height: 100vh;
     color: var(--petróleo);
+    line-height: 1.45;
 }
 
-.grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-md);
+img {
+    max-width: 100%;
+    display: block;
 }
 
-.header {
-    background-color: var(--petróleo);
-    padding: var(--space-md) var(--space-xl);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.logo-section {
-    display: flex;
-    align-items: center;
-    gap: var(--space-md);
-}
-
-.logo {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: var(--white);
-    letter-spacing: 2px;
-}
-
-.title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--white);
-}
-
-.nav-menu {
-    display: flex;
-    gap: var(--space-xl);
-    list-style: none;
-}
-
-.nav-menu a {
-    color: var(--white);
+a {
     text-decoration: none;
-    font-size: var(--text-md);
-    font-weight: 400;
-    transition: var(--transition);
+    color: inherit;
 }
 
-.nav-menu a:hover {
-    opacity: 0.8;
-}
+ul { list-style: none; }
 
-.nav-menu li.active a {
-    font-weight: 700;
-    border-bottom: 3px solid var(--acinzentado);
-    padding-bottom: 4px;
-}
+/* ----------------------------------
+   HEADER CUSTOMIZADO
+----------------------------------- */
+
+
+
+/* ----------------------------------
+   CONTEÚDO PRINCIPAL
+----------------------------------- */
 
 .main-content {
-    padding: var(--space-xl);
+    padding: 70px var(--space-lg);
     max-width: 1400px;
     margin: 0 auto;
 }
 
-.members-grid {
-    margin-top: var(--space-xl);
+/* ----------------------------------
+   GRID DE INTEGRANTES
+----------------------------------- */
+
+.integrantes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xl);
+    row-gap: 80px;
 }
 
-.member-card {
+/* ----------------------------------
+   CARD INTEGRANTE
+----------------------------------- */
+
+.integrante-card {
     position: relative;
-    background-color: var(--menta);
-    border: 2px solid var(--petróleo);
-    border-radius: var(--radius-lg);
-    padding: 60px var(--space-md) var(--space-lg);
-    text-align: center;
-    box-shadow: var(--shadow-md);
-    transition: var(--transition);
-}
-
-.member-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .avatar {
-    position: absolute;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 100px;
-    background-color: var(--petróleo);
+    width: 90px;
+    height: 90px;
+    background: var(--petróleo);
     border-radius: 50%;
-    border: 3px solid var(--menta);
+    position: relative;
+    z-index: 2;
+    margin-bottom: -45px;
 }
 
 .card-content {
+    background: var(--menta);
+    border: 2px solid var(--petróleo);
+    border-radius: var(--radius-lg);
+    padding: 55px var(--space-md) var(--space-md);
+    width: 100%;
+    min-height: 170px;
     display: flex;
     flex-direction: column;
-    gap: var(--space-xs);
+    gap: 6px;
 }
 
 .cargo {
-    font-size: 1.125rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--petróleo);
+    text-align: center;
 }
 
-.nome, .turno {
-    font-size: var(--text-md);
+.nome {
+    font-size: 1rem;
     font-weight: 400;
     color: var(--petróleo);
+    text-align: center;
+}
+
+.turno {
+    font-size: 1rem;
+    color: var(--petróleo);
+    text-align: center;
 }
 
 .turno-label {
     font-weight: 700;
 }
 
-@media (max-width: 900px) {
-    .grid-4 {
+/* ----------------------------------
+   RESPONSIVIDADE
+----------------------------------- */
+
+@media (max-width: 1200px) {
+    .integrantes-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width: 600px) {
-    .grid-4 {
+@media (max-width: 900px) {
+    .integrantes-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .header {
-        flex-direction: column;
+    
+    .nav-custom {
         gap: var(--space-md);
-        padding: var(--space-md);
     }
-
-    .nav-menu {
-        gap: var(--space-md);
-        flex-wrap: wrap;
-        justify-content: center;
+    
+    .nav-custom a {
+        font-size: 1.1rem;
     }
 }
 
-@media (max-width: 480px) {
-    .grid-4 {
+@media (max-width: 600px) {
+    .header-custom {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+    
+    .integrantes-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .nav-custom {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }

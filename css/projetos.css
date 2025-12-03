@@ -1,0 +1,194 @@
+/* ============================================================
+           SISTEMA DE DESIGN – CSS BASE GLOBAL
+        =============================================================== */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background: var(--cinza-claro);
+    color: var(--petróleo);
+    line-height: 1.45;
+}
+
+
+/* Container Principal */
+.main-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+/* Grade de 3 Colunas (Primeira Seção) */
+.columns-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 64px;
+}
+
+.column {
+    background: var(--petróleo);
+    border-radius: 20px;
+    padding: 32px 20px;
+    min-height: 500px
+}
+
+.column.analise {
+    background: #1E3A52;
+}
+
+.column.andamento {
+    background: #D4C5E8;
+}
+
+.column.concluidos {
+    background: #C8F2E5;
+}
+
+.column-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.column.analise .column-title {
+    color: var(--white);
+}
+
+.column.andamento .column-title,
+.column.concluidos .column-title {
+    color: var(--petróleo);
+}
+
+/* Cards de Projeto */
+.project-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 5px solid var(--petróleo);
+    box-shadow: 0 0 0 3px #E8D5F0;
+    position: relative;
+}
+
+.project-tag {
+    background: var(--menta);
+    color: var(--petróleo);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.project-description {
+    color: #7A7A7A;
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.progress-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.progress-bar-container {
+    flex: 1;
+    margin-right: 12px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #E8D5F0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--petróleo);
+    width: 89%;
+    border-radius: 10px;
+}
+
+.progress-text {
+    font-weight: 700;
+    color: var(--petróleo);
+    font-size: 0.85rem;
+}
+
+.card-button {
+    background: #E8C5D5;
+    color: var(--petróleo);
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    transition: all 0.3s ease;
+}
+
+.card-button:hover {
+    background: #D8B5C5;
+    transform: translateY(-2px);
+}
+
+/* Seções Horizontais */
+.horizontal-section {
+    margin-bottom: 48px;
+}
+
+.section-header {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--petróleo);
+    margin-bottom: 24px;
+}
+
+.cards-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+
+    .columns-grid,
+    .cards-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .nav-menu {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .columns-grid,
+    .cards-row {
+        grid-template-columns: 1fr;
+    }
+}
