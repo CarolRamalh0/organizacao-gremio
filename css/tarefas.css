@@ -372,7 +372,7 @@ footer {
 }
 
 /* ============================================================
-   CSS COMPLEMENTAR - PÁGINA DE PROJETOS
+   CSS COMPLEMENTAR - PÁGINA MINHAS TAREFAS
 =============================================================== */
 
 /* ----------------------------------
@@ -380,198 +380,146 @@ footer {
 ----------------------------------- */
 
 .main-content {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: var(--space-lg);
+    padding: var(--space-xl) var(--space-lg);
+}
+
+.page-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--petróleo);
+    text-align: center;
+    margin-bottom: var(--space-lg);
+    margin-top: 40px;
 }
 
 /* ----------------------------------
-   COLUNAS SUPERIORES DE STATUS
+   GRID DE CARDS DE TAREFAS
 ----------------------------------- */
 
-.status-columns {
+.tarefas-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
-    margin-bottom: var(--space-xl);
-}
-
-.status-column {
-    border-radius: 25px;
-    padding: var(--space-lg);
-    box-shadow: var(--shadow-md);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-md);
-}
-
-.status-column.analise {
-    background: var(--petróleo);
-}
-
-.status-column.andamento {
-    background: var(--lilas);
-}
-
-.status-column.concluidos {
-    background: var(--menta);
-}
-
-.status-column-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: var(--space-sm);
-}
-
-.status-column.analise .status-column-title {
-    color: var(--white);
-}
-
-.status-column.andamento .status-column-title,
-.status-column.concluidos .status-column-title {
-    color: var(--petróleo);
 }
 
 /* ----------------------------------
-   CARD DE PROJETO
+   CARD DE TAREFA
 ----------------------------------- */
 
-.projeto-card {
-    position: relative;
-    margin-top: var(--space-md);
-}
-
-.projeto-pill {
-    background: var(--menta);
-    color: var(--petróleo);
-    font-size: 1.1rem;
-    font-weight: 700;
-    text-align: center;
-    padding: var(--space-sm) var(--space-md);
-    border-radius: 50px;
-    border: 2px solid #000000;
-    margin: 0 auto;
-    width: fit-content;
-    position: relative;
-    z-index: 2;
-    margin-bottom: -12px;
-}
-
-.projeto-box {
+.tarefa-card {
     background: var(--white);
-    border: 3px solid var(--petróleo);
+    border: 10px solid var(--petróleo);
     border-radius: var(--radius-lg);
-    padding: var(--space-lg) var(--space-md) var(--space-md);
+    padding: var(--space-lg);
     position: relative;
-}
-
-.projeto-descricao {
-    font-size: var(--text-sm);
-    color: var(--petróleo);
-    margin-bottom: var(--space-md);
-    line-height: 1.4;
-}
-
-.projeto-footer {
+    min-height: 250px;
     display: flex;
     flex-direction: column;
-    gap: var(--space-sm);
 }
 
-.projeto-progresso-container {
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
-}
-
-.projeto-progresso {
-    font-size: var(--text-md);
-    font-weight: 700;
+.tarefa-header {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--menta);
     color: var(--petróleo);
-    min-width: 40px;
-}
-
-.progress-bar-wrapper {
-    flex: 1;
-    background: var(--cinza-claro);
-    height: 10px;
-    border-radius: 50px;
-    overflow: hidden;
-}
-
-.progress-bar-fill {
-    height: 100%;
-    background: var(--petróleo);
-    width: 89%;
-    border-radius: 50px;
-    transition: var(--transition);
-}
-
-.projeto-footer-actions {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.btn-abrir-tarefas {
-    background: var(--lilas);
-    color: var(--petróleo);
-    font-size: var(--text-sm);
-    font-weight: 600;
-    padding: 8px 16px;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    font-family: var(--font-main);
-    transition: var(--transition);
-}
-
-.btn-abrir-tarefas:hover {
-    background: #b7aaff;
-}
-
-/* ----------------------------------
-   SEÇÕES INFERIORES
------------------------------------ */
-
-.section-inferior {
-    margin-bottom: var(--space-xl);
-}
-
-.section-inferior-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--petróleo);
-    margin-bottom: var(--space-lg);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.section-inferior-title .icon-plus {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    background: var(--petróleo);
-    color: var(--white);
-    border-radius: 50%;
     font-size: 1.2rem;
     font-weight: 700;
+    padding: var(--space-md) var(--space-lg);
+    border-radius: 50px;
+    text-align: center;
+    white-space: nowrap;
+    border: 2px solid var(--petróleo);
+}
+
+.tarefa-progress {
+    margin-top: 40px;
+    margin-bottom: var(--space-md);
+}
+
+.progress-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.progress-bar-container {
+    flex: 1;
+    height: 6px;
+    background: rgba(195, 183, 255, 0.3);
+    border-radius: 50px;
+    overflow: hidden;
+    margin-right: var(--space-sm);
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--lilas);
+    border-radius: 50px;
+    transition: width 0.4s ease;
+    width: 0%;
+}
+
+.progress-percentage {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--petróleo);
+    min-width: 45px;
+    text-align: right;
+}
+
+/* ----------------------------------
+   LISTA DE TAREFAS
+----------------------------------- */
+
+.tarefas-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.tarefa-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.tarefa-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--petróleo);
+    border-radius: 4px;
     cursor: pointer;
+    flex-shrink: 0;
+    appearance: none;
+    position: relative;
     transition: var(--transition);
 }
 
-.section-inferior-title .icon-plus:hover {
-    background: var(--tecnológico);
-    transform: scale(1.1);
+.tarefa-checkbox:checked {
+    background: var(--petróleo);
 }
 
-.projetos-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
+.tarefa-checkbox:checked::after {
+    content: '✓';
+    position: absolute;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tarefa-label {
+    font-size: var(--text-md);
+    color: var(--petróleo);
+    cursor: pointer;
+    user-select: none;
 }
 
 /* ----------------------------------
@@ -579,26 +527,18 @@ footer {
 ----------------------------------- */
 
 @media (max-width: 900px) {
-    .status-columns {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .status-columns .status-column:last-child {
-        grid-column: 1 / -1;
-    }
-    
-    .projetos-grid {
+    .tarefas-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 600px) {
-    .status-columns {
+    .tarefas-grid {
         grid-template-columns: 1fr;
     }
     
-    .projetos-grid {
-        grid-template-columns: 1fr;
+    .page-title {
+        font-size: 1.8rem;
     }
     
     .nav-custom {

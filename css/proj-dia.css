@@ -372,7 +372,7 @@ footer {
 }
 
 /* ============================================================
-   CSS COMPLEMENTAR - PÁGINA DE PROJETOS
+   CSS COMPLEMENTAR - PÁGINA PROJETOS DIA-A-DIA
 =============================================================== */
 
 /* ----------------------------------
@@ -380,193 +380,15 @@ footer {
 ----------------------------------- */
 
 .main-content {
-    max-width: 1400px;
+    max-width: 1200px;
+    width: 90%;
     margin: 0 auto;
-    padding: var(--space-lg);
+    padding: var(--space-xl) var(--space-lg);
 }
 
 /* ----------------------------------
-   COLUNAS SUPERIORES DE STATUS
+   GRID DE PROJETOS
 ----------------------------------- */
-
-.status-columns {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
-    margin-bottom: var(--space-xl);
-}
-
-.status-column {
-    border-radius: 25px;
-    padding: var(--space-lg);
-    box-shadow: var(--shadow-md);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-md);
-}
-
-.status-column.analise {
-    background: var(--petróleo);
-}
-
-.status-column.andamento {
-    background: var(--lilas);
-}
-
-.status-column.concluidos {
-    background: var(--menta);
-}
-
-.status-column-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: var(--space-sm);
-}
-
-.status-column.analise .status-column-title {
-    color: var(--white);
-}
-
-.status-column.andamento .status-column-title,
-.status-column.concluidos .status-column-title {
-    color: var(--petróleo);
-}
-
-/* ----------------------------------
-   CARD DE PROJETO
------------------------------------ */
-
-.projeto-card {
-    position: relative;
-    margin-top: var(--space-md);
-}
-
-.projeto-pill {
-    background: var(--menta);
-    color: var(--petróleo);
-    font-size: 1.1rem;
-    font-weight: 700;
-    text-align: center;
-    padding: var(--space-sm) var(--space-md);
-    border-radius: 50px;
-    border: 2px solid #000000;
-    margin: 0 auto;
-    width: fit-content;
-    position: relative;
-    z-index: 2;
-    margin-bottom: -12px;
-}
-
-.projeto-box {
-    background: var(--white);
-    border: 3px solid var(--petróleo);
-    border-radius: var(--radius-lg);
-    padding: var(--space-lg) var(--space-md) var(--space-md);
-    position: relative;
-}
-
-.projeto-descricao {
-    font-size: var(--text-sm);
-    color: var(--petróleo);
-    margin-bottom: var(--space-md);
-    line-height: 1.4;
-}
-
-.projeto-footer {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-sm);
-}
-
-.projeto-progresso-container {
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
-}
-
-.projeto-progresso {
-    font-size: var(--text-md);
-    font-weight: 700;
-    color: var(--petróleo);
-    min-width: 40px;
-}
-
-.progress-bar-wrapper {
-    flex: 1;
-    background: var(--cinza-claro);
-    height: 10px;
-    border-radius: 50px;
-    overflow: hidden;
-}
-
-.progress-bar-fill {
-    height: 100%;
-    background: var(--petróleo);
-    width: 89%;
-    border-radius: 50px;
-    transition: var(--transition);
-}
-
-.projeto-footer-actions {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.btn-abrir-tarefas {
-    background: var(--lilas);
-    color: var(--petróleo);
-    font-size: var(--text-sm);
-    font-weight: 600;
-    padding: 8px 16px;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    font-family: var(--font-main);
-    transition: var(--transition);
-}
-
-.btn-abrir-tarefas:hover {
-    background: #b7aaff;
-}
-
-/* ----------------------------------
-   SEÇÕES INFERIORES
------------------------------------ */
-
-.section-inferior {
-    margin-bottom: var(--space-xl);
-}
-
-.section-inferior-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--petróleo);
-    margin-bottom: var(--space-lg);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.section-inferior-title .icon-plus {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    background: var(--petróleo);
-    color: var(--white);
-    border-radius: 50%;
-    font-size: 1.2rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.section-inferior-title .icon-plus:hover {
-    background: var(--tecnológico);
-    transform: scale(1.1);
-}
 
 .projetos-grid {
     display: grid;
@@ -575,28 +397,128 @@ footer {
 }
 
 /* ----------------------------------
+   CARD DE PROJETO DIA-A-DIA
+----------------------------------- */
+
+.projeto-dia-card {
+    background: var(--white);
+    border: 11px solid var(--petróleo);
+    border-radius: 30px;
+    padding: var(--space-lg);
+    position: relative;
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-md);
+}
+
+.projeto-dia-header {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--menta);
+    color: var(--petróleo);
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: var(--space-md) var(--space-xl);
+    border-radius: 50px;
+    border: 3px solid var(--petróleo);
+    text-align: center;
+    white-space: nowrap;
+    min-width: 70%;
+}
+
+/* ----------------------------------
+   BARRA DE PROGRESSO DINÂMICA
+----------------------------------- */
+
+.projeto-progress {
+    margin-top: 45px;
+    margin-bottom: var(--space-md);
+}
+
+.progress-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.progress-bar-bg {
+    flex: 1;
+    height: 7px;
+    background: rgba(195, 183, 255, 0.25);
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: var(--lilas);
+    border-radius: 50px;
+    transition: width var(--transition);
+    width: 89%;
+}
+
+.progress-percent {
+    font-size: var(--text-md);
+    font-weight: 700;
+    color: var(--petróleo);
+    min-width: 45px;
+    text-align: right;
+}
+
+/* ----------------------------------
+   DESCRIÇÃO DO PROJETO
+----------------------------------- */
+
+.projeto-descricao {
+    font-size: var(--text-sm);
+    color: var(--petróleo);
+    line-height: 1.5;
+    margin-bottom: var(--space-md);
+    flex: 1;
+}
+
+/* ----------------------------------
+   BOTÃO ABRIR TAREFAS
+----------------------------------- */
+
+.projeto-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-abrir {
+    background: var(--cinza-medio);
+    color: var(--petróleo);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-main);
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-abrir:hover {
+    background: #c9b3d3;
+}
+
+/* ----------------------------------
    RESPONSIVIDADE
 ----------------------------------- */
 
 @media (max-width: 900px) {
-    .status-columns {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .status-columns .status-column:last-child {
-        grid-column: 1 / -1;
-    }
-    
     .projetos-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 600px) {
-    .status-columns {
-        grid-template-columns: 1fr;
-    }
-    
     .projetos-grid {
         grid-template-columns: 1fr;
     }
@@ -614,5 +536,10 @@ footer {
         flex-direction: column;
         gap: var(--space-md);
         text-align: center;
+    }
+    
+    .projeto-dia-header {
+        font-size: 1.1rem;
+        padding: var(--space-sm) var(--space-md);
     }
 }

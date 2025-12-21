@@ -3,277 +3,337 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L.I.G.A - Projetos</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/projetos.css">
+    <title>L.I.G.A - Grêmio Estudantil - Projetos</title>
+
     <link rel="stylesheet" href="/css/base.css">
-</head>
+    <link rel="stylesheet" href="/css/projetos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    </head>
 <body>
-    <!-- Header Fixo -->
-  <header class="header-custom">
+    <!-- HEADER -->
+    <header class="header-custom">
         <div class="logo-title">
             <h1>L.I.G.A</h1>
             <h2>Grêmio Estudantil</h2>
         </div>
-        
         <nav class="nav-custom">
             <a href="/views/integrantes.html">Integrantes</a>
-            <a href="/views/projetos.html" class="active">Projetos</a>  
+            <a href="/views/projetos.html" class="active">Projetos</a>
             <a href="/views/proj-dia.html">Projetos dia-a-dia</a>
             <a href="/views/tarefas.html">Minhas tarefas</a>
         </nav>
     </header>
 
-    <!-- Container Principal -->
-    <main class="main-container">
-        
-        <!-- Grade de 3 Colunas (Primeira Seção) -->
-        <section class="columns-grid">
-            <!-- Coluna: Em análise -->
-            <div class="column analise">
-                <h2 class="column-title">Em análise</h2>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main-content">
+        <!-- COLUNAS SUPERIORES DE STATUS -->
+        <section class="status-columns">
+            <!-- COLUNA EM ANÁLISE -->
+            <div class="status-column analise">
+                <h3 class="status-column-title">Em análise</h3>
                 
-                <div class="project-card">
-                    <div class="project-tag">Nome do Projeto</div>
-                    <p class="project-description">descrição do projeto<br>e tarefas</p>
-                    <div class="progress-section">
-                        <div class="progress-bar-container">
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
+                <div class="projeto-card">
+                    <div class="projeto-pill">Nome do Projeto</div>
+                    <div class="projeto-box">
+                        <p class="projeto-descricao">descrição do projeto<br>e tarefas</p>
+                        <div class="projeto-footer">
+                            <div class="projeto-progresso-container">
+                                <span class="projeto-progresso">89%</span>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress-bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="projeto-footer-actions">
+                                <button class="btn-abrir-tarefas">Abrir tarefas</button>
                             </div>
                         </div>
-                        <span class="progress-text">89%</span>
                     </div>
-                    <button class="card-button">Abrir tarefas</button>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-tag">Nome do Projeto</div>
-                    <p class="project-description">descrição do projeto<br>e tarefas</p>
-                    <div class="progress-section">
-                        <div class="progress-bar-container">
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
+                <div class="projeto-card">
+                    <div class="projeto-pill">Nome do Projeto</div>
+                    <div class="projeto-box">
+                        <p class="projeto-descricao">descrição do projeto<br>e tarefas</p>
+                        <div class="projeto-footer">
+                            <div class="projeto-progresso-container">
+                                <span class="projeto-progresso">89%</span>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress-bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="projeto-footer-actions">
+                                <button class="btn-abrir-tarefas">Abrir tarefas</button>
                             </div>
                         </div>
-                        <span class="progress-text">89%</span>
                     </div>
-                    <button class="card-button">Abrir tarefas</button>
                 </div>
             </div>
 
-            <!-- Coluna: Em andamento -->
-            <div class="column andamento">
-                <h2 class="column-title">Em andamento</h2>
+            <!-- COLUNA EM ANDAMENTO -->
+            <div class="status-column andamento">
+                <h3 class="status-column-title">Em andamento</h3>
                 
-                <div class="project-card">
-                    <div class="project-tag">Nome do Projeto</div>
-                    <p class="project-description">descrição do projeto<br>e tarefas</p>
-                    <div class="progress-section">
-                        <div class="progress-bar-container">
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
+                <div class="projeto-card">
+                    <div class="projeto-pill">Nome do Projeto</div>
+                    <div class="projeto-box">
+                        <p class="projeto-descricao">descrição do projeto<br>e tarefas</p>
+                        <div class="projeto-footer">
+                            <div class="projeto-progresso-container">
+                                <span class="projeto-progresso">89%</span>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress-bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="projeto-footer-actions">
+                                <button class="btn-abrir-tarefas">Abrir tarefas</button>
                             </div>
                         </div>
-                        <span class="progress-text">89%</span>
                     </div>
-                    <button class="card-button">Abrir tarefas</button>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-tag">Nome do Projeto</div>
-                    <p class="project-description">descrição do projeto<br>e tarefas</p>
-                    <div class="progress-section">
-                        <div class="progress-bar-container">
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
+                <div class="projeto-card">
+                    <div class="projeto-pill">Nome do Projeto</div>
+                    <div class="projeto-box">
+                        <p class="projeto-descricao">descrição do projeto<br>e tarefas</p>
+                        <div class="projeto-footer">
+                            <div class="projeto-progresso-container">
+                                <span class="projeto-progresso">89%</span>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress-bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="projeto-footer-actions">
+                                <button class="btn-abrir-tarefas">Abrir tarefas</button>
                             </div>
                         </div>
-                        <span class="progress-text">89%</span>
                     </div>
-                    <button class="card-button">Abrir tarefas</button>
                 </div>
             </div>
 
-            <!-- Coluna: Concluídos -->
-            <div class="column concluidos">
-                <h2 class="column-title">Concluídos</h2>
+            <!-- COLUNA CONCLUÍDOS -->
+            <div class="status-column concluidos">
+                <h3 class="status-column-title">Concluídos</h3>
                 
-                <div class="project-card">
-                    <div class="project-tag">Nome do Projeto</div>
-                    <p class="project-description">descrição do projeto<br>e tarefas</p>
-                    <div class="progress-section">
-                        <div class="progress-bar-container">
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
+                <div class="projeto-card">
+                    <div class="projeto-pill">Nome do Projeto</div>
+                    <div class="projeto-box">
+                        <p class="projeto-descricao">descrição do projeto<br>e tarefas</p>
+                        <div class="projeto-footer">
+                            <div class="projeto-progresso-container">
+                                <span class="projeto-progresso">80%</span>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress-bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="projeto-footer-actions">
+                                <button class="btn-abrir-tarefas">Abrir tarefas</button>
                             </div>
                         </div>
-                        <span class="progress-text">89%</span>
                     </div>
-                    <button class="card-button">Abrir tarefas</button>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-tag">Nome do Projeto</div>
-                    <p class="project-description">descrição do projeto<br>e tarefas</p>
-                    <div class="progress-section">
-                        <div class="progress-bar-container">
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
+                <div class="projeto-card">
+                    <div class="projeto-pill">Nome do Projeto</div>
+                    <div class="projeto-box">
+                        <p class="projeto-descricao">descrição do projeto<br>e tarefas</p>
+                        <div class="projeto-footer">
+                            <div class="projeto-progresso-container">
+                                <span class="projeto-progresso">89%</span>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress-bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="projeto-footer-actions">
+                                <button class="btn-abrir-tarefas">Abrir tarefas</button>
                             </div>
                         </div>
-                        <span class="progress-text">89%</span>
                     </div>
-                    <button class="card-button">Abrir tarefas</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção: Em andamento (horizontal) -->
-        <section class="horizontal-section">
-            <h2 class="section-header">Em andamento</h2>
-            <div class="cards-row">
-                <div class="project-card">
-                    <div class="project-tag">Nome do Projeto</div>
-                    <p class="project-description">descrição do projeto<br>e tarefas</p>
-                    <div class="progress-section">
-                        <div class="progress-bar-container">
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
-                            </div>
-                        </div>
-                        <span class="progress-text">89%</span>
-                    </div>
-                    <button class="card-button">Abrir tarefas</button>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-tag">Nome do Projeto</div>
-                    <p class="project-description">descrição do projeto<br>e tarefas</p>
-                    <div class="progress-section">
-                        <div class="progress-bar-container">
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
-                            </div>
-                        </div>
-                        <span class="progress-text">89%</span>
-                    </div>
-                    <button class="card-button">Abrir tarefas</button>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-tag">Nome do Projeto</div>
-                    <p class="project-description">descrição do projeto<br>e tarefas</p>
-                    <div class="progress-section">
-                        <div class="progress-bar-container">
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
-                            </div>
-                        </div>
-                        <span class="progress-text">89%</span>
-                    </div>
-                    <button class="card-button">Abrir tarefas</button>
                 </div>
             </div>
         </section>
 
-        <!-- Seção: Em análise (horizontal) -->
-        <section class="horizontal-section">
-            <h2 class="section-header">Em análise</h2>
-            <div class="cards-row">
-                <div class="project-card">
-                    <div class="project-tag">Nome do Projeto</div>
-                    <p class="project-description">descrição do projeto<br>e tarefas</p>
-                    <div class="progress-section">
-                        <div class="progress-bar-container">
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
+        <!-- SEÇÃO INFERIOR: EM ANDAMENTO -->
+        <section class="section-inferior">
+            <h3 class="section-inferior-title">
+                Em andamento
+                <span class="icon-plus">+</span>
+            </h3>
+            <div class="projetos-grid">
+                <div class="projeto-card">
+                    <div class="projeto-pill">Nome do Projeto</div>
+                    <div class="projeto-box">
+                        <p class="projeto-descricao">descrição do projeto<br>e tarefas</p>
+                        <div class="projeto-footer">
+                            <div class="projeto-progresso-container">
+                                <span class="projeto-progresso">89%</span>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress-bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="projeto-footer-actions">
+                                <button class="btn-abrir-tarefas">Abrir tarefas</button>
                             </div>
                         </div>
-                        <span class="progress-text">89%</span>
                     </div>
-                    <button class="card-button">Abrir tarefas</button>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-tag">Nome do Projeto</div>
-                    <p class="project-description">descrição do projeto<br>e tarefas</p>
-                    <div class="progress-section">
-                        <div class="progress-bar-container">
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
+                <div class="projeto-card">
+                    <div class="projeto-pill">Nome do Projeto</div>
+                    <div class="projeto-box">
+                        <p class="projeto-descricao">descrição do projeto<br>e tarefas</p>
+                        <div class="projeto-footer">
+                            <div class="projeto-progresso-container">
+                                <span class="projeto-progresso">89%</span>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress-bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="projeto-footer-actions">
+                                <button class="btn-abrir-tarefas">Abrir tarefas</button>
                             </div>
                         </div>
-                        <span class="progress-text">89%</span>
                     </div>
-                    <button class="card-button">Abrir tarefas</button>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-tag">Nome do Projeto</div>
-                    <p class="project-description">descrição do projeto<br>e tarefas</p>
-                    <div class="progress-section">
-                        <div class="progress-bar-container">
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
+                <div class="projeto-card">
+                    <div class="projeto-pill">Nome do Projeto</div>
+                    <div class="projeto-box">
+                        <p class="projeto-descricao">descrição do projeto<br>e tarefas</p>
+                        <div class="projeto-footer">
+                            <div class="projeto-progresso-container">
+                                <span class="projeto-progresso">89%</span>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress-bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="projeto-footer-actions">
+                                <button class="btn-abrir-tarefas">Abrir tarefas</button>
                             </div>
                         </div>
-                        <span class="progress-text">89%</span>
                     </div>
-                    <button class="card-button">Abrir tarefas</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção: Concluídos (horizontal) -->
-        <section class="horizontal-section">
-            <h2 class="section-header">Concluídos</h2>
-            <div class="cards-row">
-                <div class="project-card">
-                    <div class="project-tag">Nome do Projeto</div>
-                    <p class="project-description">descrição do projeto<br>e tarefas</p>
-                    <div class="progress-section">
-                        <div class="progress-bar-container">
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
-                            </div>
-                        </div>
-                        <span class="progress-text">89%</span>
-                    </div>
-                    <button class="card-button">Abrir tarefas</button>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-tag">Nome do Projeto</div>
-                    <p class="project-description">descrição do projeto<br>e tarefas</p>
-                    <div class="progress-section">
-                        <div class="progress-bar-container">
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
-                            </div>
-                        </div>
-                        <span class="progress-text">89%</span>
-                    </div>
-                    <button class="card-button">Abrir tarefas</button>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-tag">Nome do Projeto</div>
-                    <p class="project-description">descrição do projeto<br>e tarefas</p>
-                    <div class="progress-section">
-                        <div class="progress-bar-container">
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
-                            </div>
-                        </div>
-                        <span class="progress-text">89%</span>
-                    </div>
-                    <button class="card-button">Abrir tarefas</button>
                 </div>
             </div>
         </section>
 
-    </main>
+        <!-- SEÇÃO INFERIOR: EM ANÁLISE -->
+        <section class="section-inferior">
+            <h3 class="section-inferior-title">
+                Em análise
+                <span class="icon-plus">+</span>
+            </h3>
+            <div class="projetos-grid">
+                <div class="projeto-card">
+                    <div class="projeto-pill">Nome do Projeto</div>
+                    <div class="projeto-box">
+                        <p class="projeto-descricao">descrição do projeto<br>e tarefas</p>
+                        <div class="projeto-footer">
+                            <div class="projeto-progresso-container">
+                                <span class="projeto-progresso">89%</span>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress-bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="projeto-footer-actions">
+                                <button class="btn-abrir-tarefas">Abrir tarefas</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-</body>
-</html>
+                <div class="projeto-card">
+                    <div class="projeto-pill">Nome do Projeto</div>
+                    <div class="projeto-box">
+                        <p class="projeto-descricao">descrição do projeto<br>e tarefas</p>
+                        <div class="projeto-footer">
+                            <div class="projeto-progresso-container">
+                                <span class="projeto-progresso">89%</span>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress-bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="projeto-footer-actions">
+                                <button class="btn-abrir-tarefas">Abrir tarefas</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projeto-card">
+                    <div class="projeto-pill">Nome do Projeto</div>
+                    <div class="projeto-box">
+                        <p class="projeto-descricao">descrição do projeto<br>e tarefas</p>
+                        <div class="projeto-footer">
+                            <div class="projeto-progresso-container">
+                                <span class="projeto-progresso">89%</span>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress-bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="projeto-footer-actions">
+                                <button class="btn-abrir-tarefas">Abrir tarefas</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO INFERIOR: CONCLUÍDOS -->
+        <section class="section-inferior">
+            <h3 class="section-inferior-title">
+                Concluídos
+                <span class="icon-plus">+</span>
+            </h3>
+            <div class="projetos-grid">
+                <div class="projeto-card">
+                    <div class="projeto-pill">Nome do Projeto</div>
+                    <div class="projeto-box">
+                        <p class="projeto-descricao">descrição do projeto<br>e tarefas</p>
+                        <div class="projeto-footer">
+                            <div class="projeto-progresso-container">
+                                <span class="projeto-progresso">89%</span>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress-bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="projeto-footer-actions">
+                                <button class="btn-abrir-tarefas">Abrir tarefas</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projeto-card">
+                    <div class="projeto-pill">Nome do Projeto</div>
+                    <div class="projeto-box">
+                        <p class="projeto-descricao">descrição do projeto<br>e tarefas</p>
+                        <div class="projeto-footer">
+                            <div class="projeto-progresso-container">
+                                <span class="projeto-progresso">89%</span>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress-bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="projeto-footer-actions">
+                                <button class="btn-abrir-tarefas">Abrir tarefas</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projeto-card">
+                    <div class="projeto-pill">Nome do Projeto</div>
+                    <div class="projeto-box">
+                        <p class="projeto-descricao">descrição do projeto<br>e tarefas</p>
+                        <div class="projeto-footer">
+                            <div class="projeto-progresso-container">
+                                <span class="projeto-progresso">89%</span>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress-bar-fill"></div>
+                                </div>
+                            </div>
+                                                        <div class="projeto-footer-actions">
+                                <button class="btn-abrir-tarefas">Abrir tarefas</button>
+                            <div class="projeto-footer-actions">
