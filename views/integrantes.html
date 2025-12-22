@@ -7,110 +7,158 @@
 
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/integrantes.css">
+    <script src="/scripts/integrantes.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- HEADER -->
+
     <header class="header-custom">
         <div class="logo-title">
             <h1>L.I.G.A</h1>
             <h2>Grêmio Estudantil</h2>
         </div>
         <nav class="nav-custom">
-            <a href="/views/integrantes.html" class="active">Integrantes</a>
-            <a href="/views/projetos.html">Projetos</a>
-            <a href="/views/proj-dia.html">Projetos dia-a-dia</a>
-            <a href="/views/tarefas.html">Minhas tarefas</a>
+            <a href="views/integrantes.html" class="active">Integrantes</a>
+            <a href="views/projetos.html">Projetos</a>
+            <a href="views/proj-dia.html">Projetos dia-a-dia</a>
+            <a href="views/tarefas.html">Minhas tarefas</a>
         </nav>
     </header>
 
-    <!-- CONTEÚDO PRINCIPAL -->
+
     <main class="main-content">
-        <button class="btn-adicionar">Adicionar Integrante</button>
+        <button class="btn-adicionar">+ Adicionar Integrante</button>
 
         <div class="integrantes-grid">
-            <!-- Integrante 1 -->
-            <div class="integrante-card">
+            <!-- Card 1 -->
+            <div class="integrante-card" 
+                 data-cargo="Desenvolvedor" 
+                 data-nome="João Silva" 
+                 data-turno="Manhã"
+                 data-descricao="Responsável pelo desenvolvimento front-end e criação de interfaces modernas e responsivas.">
                 <div class="integrante-avatar"></div>
                 <div class="integrante-info">
-                    <div class="integrante-cargo">Cargo</div>
-                    <div class="integrante-nome">Nome</div>
+                    <div class="integrante-cargo">Desenvolvedor</div>
+                    <div class="integrante-nome">João Silva</div>
                     <div class="integrante-turno"><strong>Turno:</strong> Manhã</div>
                 </div>
             </div>
 
-            <!-- Integrante 2 -->
-            <div class="integrante-card">
+            <!-- Card 2 -->
+            <div class="integrante-card" 
+                 data-cargo="Designer" 
+                 data-nome="Maria Santos" 
+                 data-turno="Tarde"
+                 data-descricao="Especialista em UX/UI, responsável pela experiência do usuário e identidade visual dos projetos.">
                 <div class="integrante-avatar"></div>
                 <div class="integrante-info">
-                    <div class="integrante-cargo">Cargo</div>
-                    <div class="integrante-nome">Nome</div>
-                    <div class="integrante-turno"><strong>Turno:</strong> Manhã</div>
+                    <div class="integrante-cargo">Designer</div>
+                    <div class="integrante-nome">Maria Santos</div>
+                    <div class="integrante-turno"><strong>Turno:</strong> Tarde</div>
                 </div>
             </div>
 
-            <!-- Integrante 3 -->
-            <div class="integrante-card">
+            <!-- Card 3 -->
+            <div class="integrante-card" 
+                 data-cargo="Gerente" 
+                 data-nome="Pedro Costa" 
+                 data-turno="Integral"
+                 data-descricao="Coordena as atividades da equipe, gerencia recursos e mantém comunicação com stakeholders.">
                 <div class="integrante-avatar"></div>
                 <div class="integrante-info">
-                    <div class="integrante-cargo">Cargo</div>
-                    <div class="integrante-nome">Nome</div>
-                    <div class="integrante-turno"><strong>Turno:</strong> Manhã</div>
+                    <div class="integrante-cargo">Gerente</div>
+                    <div class="integrante-nome">Pedro Costa</div>
+                    <div class="integrante-turno"><strong>Turno:</strong> Integral</div>
                 </div>
             </div>
 
-            <!-- Integrante 4 -->
-            <div class="integrante-card">
+            <!-- Card 4 -->
+            <div class="integrante-card" 
+                 data-cargo="Analista" 
+                 data-nome="Ana Oliveira" 
+                 data-turno="Manhã"
+                 data-descricao="Realiza análise de dados, levantamento de requisitos e documentação técnica dos sistemas.">
                 <div class="integrante-avatar"></div>
                 <div class="integrante-info">
-                    <div class="integrante-cargo">Cargo</div>
-                    <div class="integrante-nome">Nome</div>
-                    <div class="integrante-turno"><strong>Turno:</strong> Manhã</div>
-                </div>
-            </div>
-
-            <!-- Integrante 5 -->
-            <div class="integrante-card">
-                <div class="integrante-avatar"></div>
-                <div class="integrante-info">
-                    <div class="integrante-cargo">Cargo</div>
-                    <div class="integrante-nome">Nome</div>
-                    <div class="integrante-turno"><strong>Turno:</strong> Manhã</div>
-                </div>
-            </div>
-
-            <!-- Integrante 6 -->
-            <div class="integrante-card">
-                <div class="integrante-avatar"></div>
-                <div class="integrante-info">
-                    <div class="integrante-cargo">Cargo</div>
-                    <div class="integrante-nome">Nome</div>
-                    <div class="integrante-turno"><strong>Turno:</strong> Manhã</div>
-                </div>
-            </div>
-
-            <!-- Integrante 7 -->
-            <div class="integrante-card">
-                <div class="integrante-avatar"></div>
-                <div class="integrante-info">
-                    <div class="integrante-cargo">Cargo</div>
-                    <div class="integrante-nome">Nome</div>
-                    <div class="integrante-turno"><strong>Turno:</strong> Manhã</div>
-                </div>
-            </div>
-
-            <!-- Integrante 8 -->
-            <div class="integrante-card">
-                <div class="integrante-avatar"></div>
-                <div class="integrante-info">
-                    <div class="integrante-cargo">Cargo</div>
-                    <div class="integrante-nome">Nome</div>
+                    <div class="integrante-cargo">Analista</div>
+                    <div class="integrante-nome">Ana Oliveira</div>
                     <div class="integrante-turno"><strong>Turno:</strong> Manhã</div>
                 </div>
             </div>
         </div>
     </main>
+
+    <!-- Popup Modal - Visualizar/Editar -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-modal">
+            <div class="popup-close" id="popupClose">×</div>
+            
+            <div class="popup-header">
+                <div class="popup-avatar" id="popupAvatar">
+                    <div class="avatar-upload-overlay" id="avatarUploadTrigger">
+                        📷 Alterar foto
+                    </div>
+                </div>
+                <input type="file" id="avatarInput" class="hidden" accept="image/*">
+                
+                <div class="popup-cargo" id="popupCargo">Cargo</div>
+                <div class="popup-nome" id="popupNome">Nome</div>
+                <div class="popup-turno" id="popupTurno">Turno</div>
+            </div>
+
+            <div class="popup-body">
+                <div class="popup-descricao-card">
+                    <div class="popup-descricao-titulo">Descrição</div>
+                    <div class="popup-descricao-texto" id="popupDescricao">
+                        Descrição do integrante
+                    </div>
+                </div>
+
+                <div class="popup-actions">
+                    <button class="btn-editar" id="btnEditar">Editar</button>
+                    <button class="btn-salvar hidden" id="btnSalvar">Salvar</button>
+                    <button class="btn-cancelar hidden" id="btnCancelar">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Modal - Adicionar Novo -->
+    <div class="popup-overlay" id="popupAdicionar">
+        <div class="popup-modal">
+            <div class="popup-close" id="popupAdicionarClose">×</div>
+            
+            <div class="popup-header">
+                <h3 class="popup-title">Novo Integrante</h3>
+                
+                <div class="popup-avatar" id="popupNovoAvatar">
+                    <div class="avatar-upload-overlay" style="opacity: 1;">
+                        📷 Adicionar foto
+                    </div>
+                </div>
+                <input type="file" id="novoAvatarInput" class="hidden" accept="image/*">
+                
+                <div class="popup-cargo editavel" id="popupNovoCargo" contenteditable="true">Cargo</div>
+                <div class="popup-nome editavel" id="popupNovoNome" contenteditable="true">Nome Completo</div>
+                <div class="popup-turno editavel" id="popupNovoTurno" contenteditable="true">Manhã / Tarde / Integral</div>
+            </div>
+
+            <div class="popup-body">
+                <div class="popup-descricao-card">
+                    <div class="popup-descricao-titulo">Descrição</div>
+                    <div class="popup-descricao-texto editavel" id="popupNovaDescricao" contenteditable="true">
+                        Digite a descrição das responsabilidades e atividades do integrante...
+                    </div>
+                </div>
+
+                <div class="popup-actions">
+                    <button class="btn-salvar" id="btnAdicionarSalvar">Adicionar</button>
+                    <button class="btn-cancelar" id="btnAdicionarCancelar">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
