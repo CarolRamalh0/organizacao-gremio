@@ -15,15 +15,18 @@
 <body>
 
     <header class="header-custom">
+
         <div class="logo-title">
             <h1>L.I.G.A</h1>
             <h2>Grêmio Estudantil</h2>
         </div>
+
         <nav class="nav-custom">
-            <a href="views/integrantes.html" class="active">Integrantes</a>
-            <a href="views/projetos.html">Projetos</a>
-            <a href="views/proj-dia.html">Projetos dia-a-dia</a>
-            <a href="views/tarefas.html">Minhas tarefas</a>
+            <a href="/views/integrantes.html" class="active">Integrantes</a>
+            <a href="/views/projetos.html">Projetos</a>
+            <a href="/views/proj-dia.html">Projetos dia-a-dia</a>
+            <a href="/views/tarefas.html">Minhas tarefas</a>
+
         </nav>
     </header>
 
@@ -131,7 +134,7 @@
             <div class="popup-close" id="popupAdicionarClose">×</div>
             
             <div class="popup-header">
-                <h3 class="popup-title">Novo Integrante</h3>
+                <h3 style="color: var(--petróleo); font-size: 1.5rem; margin-bottom: var(--space-md);">Novo Integrante</h3>
                 
                 <div class="popup-avatar" id="popupNovoAvatar">
                     <div class="avatar-upload-overlay" style="opacity: 1;">
@@ -140,9 +143,9 @@
                 </div>
                 <input type="file" id="novoAvatarInput" class="hidden" accept="image/*">
                 
-                <div class="popup-cargo editavel" id="popupNovoCargo" contenteditable="true">Cargo</div>
-                <div class="popup-nome editavel" id="popupNovoNome" contenteditable="true">Nome Completo</div>
-                <div class="popup-turno editavel" id="popupNovoTurno" contenteditable="true">Manhã / Tarde / Integral</div>
+                <div class="popup-cargo editavel" id="popupNovoCargo" contenteditable="true" placeholder="Cargo">Cargo</div>
+                <div class="popup-nome editavel" id="popupNovoNome" contenteditable="true" placeholder="Nome">Nome Completo</div>
+                <div class="popup-turno editavel" id="popupNovoTurno" contenteditable="true" placeholder="Turno">Manhã / Tarde / Integral</div>
             </div>
 
             <div class="popup-body">
@@ -160,5 +163,7 @@
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
