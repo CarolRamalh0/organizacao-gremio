@@ -7,11 +7,12 @@
 
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/proj-dia.css">
+    <script src="/scripts/proj-dia.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    </head>
-    <body>
+</head>
+<body>
     <!-- HEADER -->
     <header class="header-custom">
         <div class="logo-title">
@@ -22,125 +23,48 @@
             <a href="/views/integrantes.html">Integrantes</a>
             <a href="/views/projetos.html">Projetos</a>
             <a href="/views/proj-dia.html" class="active">Projetos dia-a-dia</a>
-            <a href="/views/tarefas.html">Minhas tarefas</a>
+            <a href="/views/minhas-tarefas.html">Minhas tarefas</a>
         </nav>
     </header>
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main class="main-content">
-        <div class="projetos-grid">
-            <!-- CARD 1 -->
-            <div class="projeto-dia-card">
-                <div class="projeto-dia-header">Nome do Projeto</div>
-                <div class="projeto-progress">
-                    <div class="progress-wrapper">
-                        <div class="progress-bar-bg">
-                            <div class="progress-bar-fill" data-percent="89"></div>
-                        </div>
-                        <span class="progress-percent">89%</span>
-                    </div>
-                </div>
-                <p class="projeto-descricao">descrição do projeto<br>e tarefas</p>
-                <div class="projeto-footer">
-                    <button class="btn-abrir">Abrir tarefas</button>
-                </div>
-            </div>
-
-            <!-- CARD 2 -->
-            <div class="projeto-dia-card">
-                <div class="projeto-dia-header">Nome do Projeto</div>
-                <div class="projeto-progress">
-                    <div class="progress-wrapper">
-                        <div class="progress-bar-bg">
-                            <div class="progress-bar-fill" data-percent="89"></div>
-                        </div>
-                        <span class="progress-percent">89%</span>
-                    </div>
-                </div>
-                <p class="projeto-descricao">descrição do projeto<br>e tarefas</p>
-                <div class="projeto-footer">
-                    <button class="btn-abrir">Abrir tarefas</button>
-                </div>
-            </div>
-
-            <!-- CARD 3 -->
-            <div class="projeto-dia-card">
-                <div class="projeto-dia-header">Nome do Projeto</div>
-                <div class="projeto-progress">
-                    <div class="progress-wrapper">
-                        <div class="progress-bar-bg">
-                            <div class="progress-bar-fill" data-percent="89"></div>
-                        </div>
-                        <span class="progress-percent">89%</span>
-                    </div>
-                </div>
-                <p class="projeto-descricao">descrição do projeto<br>e tarefas</p>
-                <div class="projeto-footer">
-                    <button class="btn-abrir">Abrir tarefas</button>
-                </div>
-            </div>
-
-            <!-- CARD 4 -->
-            <div class="projeto-dia-card">
-                <div class="projeto-dia-header">Nome do Projeto</div>
-                <div class="projeto-progress">
-                    <div class="progress-wrapper">
-                        <div class="progress-bar-bg">
-                            <div class="progress-bar-fill" data-percent="89"></div>
-                        </div>
-                        <span class="progress-percent">89%</span>
-                    </div>
-                </div>
-                <p class="projeto-descricao">descrição do projeto<br>e tarefas</p>
-                <div class="projeto-footer">
-                    <button class="btn-abrir">Abrir tarefas</button>
-                </div>
-            </div>
-
-            <!-- CARD 5 -->
-            <div class="projeto-dia-card">
-                <div class="projeto-dia-header">Nome do Projeto</div>
-                <div class="projeto-progress">
-                    <div class="progress-wrapper">
-                        <div class="progress-bar-bg">
-                            <div class="progress-bar-fill" data-percent="89"></div>
-                        </div>
-                        <span class="progress-percent">89%</span>
-                    </div>
-                </div>
-                <p class="projeto-descricao">descrição do projeto<br>e tarefas</p>
-                <div class="projeto-footer">
-                    <button class="btn-abrir">Abrir tarefas</button>
-                </div>
-            </div>
-
-            <!-- CARD 6 -->
-            <div class="projeto-dia-card">
-                <div class="projeto-dia-header">Nome do Projeto</div>
-                <div class="projeto-progress">
-                    <div class="progress-wrapper">
-                        <div class="progress-bar-bg">
-                            <div class="progress-bar-fill" data-percent="89"></div>
-                        </div>
-                        <span class="progress-percent">89%</span>
-                    </div>
-                </div>
-                <p class="projeto-descricao">descrição do projeto<br>e tarefas</p>
-                <div class="projeto-footer">
-                    <button class="btn-abrir">Abrir tarefas</button>
-                </div>
-            </div>
-        </div>
+        <div class="projetos-grid" id="projetos-grid"></div>
     </main>
 
-    <script>
-        // Botões "Abrir tarefas" são clicáveis mas sem funcionalidade por enquanto
-        document.querySelectorAll('.btn-abrir').forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Funcionalidade será implementada futuramente
-                console.log('Botão Abrir tarefas clicado');
-            });
-        });
-    </script>
+    <!-- POPUP / MODAL -->
+    <div class="popup-overlay" id="popup-overlay">
+        <div class="popup-container">
+            <div class="popup-header-tag" id="popup-nome-projeto">Nome do Projeto</div>
+            
+            <div class="popup-progress-section">
+                <div class="popup-progress-wrapper">
+                    <div class="popup-progress-bar">
+                        <div class="popup-progress-fill" id="popup-progress-fill"></div>
+                    </div>
+                    <span class="popup-progress-percent" id="popup-progress-percent">0%</span>
+                </div>
+            </div>
+
+            <div class="popup-content">
+                <div class="popup-descricao" id="popup-descricao">
+                    Descrição do projeto
+                </div>
+
+                <h3 class="popup-tarefas-titulo">✓ Tarefas</h3>
+                <ul class="popup-tarefas-lista" id="popup-tarefas-lista"></ul>
+
+                <div class="popup-add-tarefa">
+                    <input type="text" class="popup-input-tarefa" id="input-nova-tarefa" placeholder="Digite uma nova tarefa...">
+                    <button class="btn-add-tarefa" id="btn-add-tarefa">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="popup-footer">
+                <button class="btn-excluir-projeto" id="btn-excluir-projeto">Excluir Projeto</button>
+                <button class="btn-fechar-popup" id="btn-fechar-popup">Fechar Tarefas</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

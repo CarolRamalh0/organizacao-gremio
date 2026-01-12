@@ -1,26 +1,20 @@
 /* ============================================================
    SISTEMA DE DESIGN – CSS BASE GLOBAL
-   Paleta oficial + tipografia + padrões + componentes
 =============================================================== */
-
-
-/* ----------------------------------
-   PALETA OFICIAL (DESIGN TOKENS)
------------------------------------ */
 
 :root {
     /* Primárias */
-    --petróleo: #1A2F4B;           /* Azul petróleo profundo */
-    --tecnológico: #3F6DA8;        /* Azul tecnológico médio */
-    --acinzentado: #7EA9D8;        /* Azul suave acinzentado */
+    --petróleo: #1A2F4B;
+    --tecnológico: #3F6DA8;
+    --acinzentado: #7EA9D8;
 
     /* Acentos */
-    --lilas: #C3B7FF;              /* Lilás suave inteligente */
-    --menta: #B8F0DE;              /* Verde menta futurista */
+    --lilas: #C3B7FF;
+    --menta: #B8F0DE;
 
     /* Neutros */
-    --cinza-claro: #F3F0F7;        /* Cinza quente claro */
-    --cinza-medio: #D8C5DE;        /* Cinza médio elegante */
+    --cinza-claro: #F3F0F7;
+    --cinza-medio: #D8C5DE;
     --white: #FFFFFF;
 
     /* Tipografia */
@@ -52,12 +46,6 @@
     --transition: 0.25s ease;
 }
 
-
-
-/* ----------------------------------
-   RESET + BASE
------------------------------------ */
-
 * {
     margin: 0;
     padding: 0;
@@ -82,8 +70,6 @@ a {
 }
 
 ul { list-style: none; }
-
-
 
 .header-custom {
     width: 100%;
@@ -137,246 +123,7 @@ ul { list-style: none; }
 }
 
 /* ----------------------------------
-   LAYOUT BASE
------------------------------------ */
-
-.container {
-    width: min(1200px, 90%);
-    margin: 0 auto;
-    padding: var(--space-md) 0;
-}
-
-.section {
-    margin-bottom: var(--space-xl);
-}
-
-.section-title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--petróleo);
-    margin-bottom: var(--space-md);
-}
-
-
-
-/* ----------------------------------
-   NAVBAR
------------------------------------ */
-
-.navbar {
-    width: 100%;
-    padding: var(--space-sm) var(--space-md);
-    background: var(--white);
-    box-shadow: var(--shadow-sm);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar .logo {
-    font-weight: 700;
-    font-size: 1.4rem;
-    color: var(--tecnológico);
-}
-
-.navbar ul {
-    display: flex;
-    gap: var(--space-md);
-}
-
-.navbar a {
-    font-weight: 600;
-    color: var(--petróleo);
-    padding: 6px 10px;
-    border-radius: var(--radius-sm);
-    transition: var(--transition);
-}
-
-.navbar a:hover {
-    background: var(--cinza-claro);
-}
-
-
-
-/* ----------------------------------
-   BOTÕES
------------------------------------ */
-
-.btn {
-    display: inline-block;
-    padding: var(--space-sm) var(--space-md);
-    font-weight: 600;
-    border-radius: var(--radius-md);
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-/* Primário */
-.btn-primary {
-    background: var(--tecnológico);
-    color: var(--white);
-}
-
-.btn-primary:hover {
-    background: var(--petróleo);
-}
-
-/* Acento lilás */
-.btn-lilas {
-    background: var(--lilas);
-    color: var(--petróleo);
-}
-
-.btn-lilas:hover {
-    background: #b7aaff;
-}
-
-/* Outline */
-.btn-outline {
-    border: 2px solid var(--tecnológico);
-    color: var(--tecnológico);
-}
-
-.btn-outline:hover {
-    background: var(--tecnológico);
-    color: var(--white);
-}
-
-
-
-/* ----------------------------------
-   CARDS
------------------------------------ */
-
-.card {
-    background: var(--white);
-    border-radius: var(--radius-lg);
-    padding: var(--space-md);
-    box-shadow: var(--shadow-md);
-    transition: var(--transition);
-}
-
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-}
-
-.card-header {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--petróleo);
-    margin-bottom: var(--space-sm);
-}
-
-.card-body {
-    font-size: var(--text-md);
-    color: var(--tecnológico);
-}
-
-
-
-/* ----------------------------------
-   INPUTS / FORMS
------------------------------------ */
-
-input, textarea, select {
-    width: 100%;
-    padding: var(--space-sm);
-    border-radius: var(--radius-md);
-    border: 2px solid var(--cinza-medio);
-    background: var(--white);
-    font-family: var(--font-main);
-    color: var(--petróleo);
-    transition: var(--transition);
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-    border-color: var(--tecnológico);
-    outline: none;
-}
-
-
-
-/* ----------------------------------
-   GRID SYSTEM
------------------------------------ */
-
-.grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-md);
-}
-
-.grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-md);
-}
-
-.grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-md);
-}
-
-
-
-/* ----------------------------------
-   UTILITÁRIOS
------------------------------------ */
-
-.flex { display: flex; }
-.flex-between { display: flex; justify-content: space-between; align-items: center; }
-.flex-center { display: flex; justify-content: center; align-items: center; }
-
-.mt-sm { margin-top: var(--space-sm); }
-.mt-md { margin-top: var(--space-md); }
-.mt-lg { margin-top: var(--space-lg); }
-
-.mb-sm { margin-bottom: var(--space-sm); }
-.mb-md { margin-bottom: var(--space-md); }
-.mb-lg { margin-bottom: var(--space-lg); }
-
-
-
-/* ----------------------------------
-   RODAPÉ
------------------------------------ */
-
-footer {
-    margin-top: var(--space-xl);
-    padding: var(--space-md);
-    background: var(--white);
-    text-align: center;
-    color: var(--petróleo);
-}
-
-
-
-/* ----------------------------------
-   RESPONSIVIDADE
------------------------------------ */
-
-@media (max-width: 900px) {
-    .grid-3, .grid-4 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .grid-2, .grid-3, .grid-4 {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ============================================================
-   CSS COMPLEMENTAR - PÁGINA PROJETOS DIA-A-DIA
-=============================================================== */
-
-/* ----------------------------------
-   ÁREA DE CONTEÚDO PRINCIPAL
+   PÁGINA PRINCIPAL
 ----------------------------------- */
 
 .main-content {
@@ -386,19 +133,11 @@ footer {
     padding: var(--space-xl) var(--space-lg);
 }
 
-/* ----------------------------------
-   GRID DE PROJETOS
------------------------------------ */
-
 .projetos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
 }
-
-/* ----------------------------------
-   CARD DE PROJETO DIA-A-DIA
------------------------------------ */
 
 .projeto-dia-card {
     background: var(--white);
@@ -429,9 +168,7 @@ footer {
     min-width: 70%;
 }
 
-/* ----------------------------------
-   BARRA DE PROGRESSO DINÂMICA
------------------------------------ */
+
 
 .projeto-progress {
     margin-top: 45px;
@@ -458,7 +195,6 @@ footer {
     background: var(--lilas);
     border-radius: 50px;
     transition: width var(--transition);
-    width: 89%;
 }
 
 .progress-percent {
@@ -469,10 +205,6 @@ footer {
     text-align: right;
 }
 
-/* ----------------------------------
-   DESCRIÇÃO DO PROJETO
------------------------------------ */
-
 .projeto-descricao {
     font-size: var(--text-sm);
     color: var(--petróleo);
@@ -480,10 +212,6 @@ footer {
     margin-bottom: var(--space-md);
     flex: 1;
 }
-
-/* ----------------------------------
-   BOTÃO ABRIR TAREFAS
------------------------------------ */
 
 .projeto-footer {
     display: flex;
@@ -505,6 +233,245 @@ footer {
 }
 
 .btn-abrir:hover {
+    background: #c9b3d3;
+}
+
+/* ----------------------------------
+   POPUP / MODAL
+----------------------------------- */
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 47, 75, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: var(--space-md);
+}
+
+.popup-overlay.active {
+    display: flex;
+}
+
+.popup-container {
+    background: var(--white);
+    border: 11px solid var(--petróleo);
+    border-radius: 30px;
+    width: 100%;
+    max-width: 520px;
+    max-height: 85vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-lg);
+}
+
+.popup-header-tag {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--menta);
+    color: var(--petróleo);
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: var(--space-md) var(--space-xl);
+    border-radius: 50px;
+    border: 3px solid var(--petróleo);
+    text-align: center;
+    white-space: nowrap;
+    min-width: 60%;
+}
+
+.popup-progress-section {
+    padding: var(--space-lg) var(--space-lg) 0;
+    margin-top: 30px;
+}
+
+.popup-progress-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.popup-progress-bar {
+    flex: 1;
+    height: 9px;
+    background: rgba(195, 183, 255, 0.25);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.popup-progress-fill {
+    height: 100%;
+    background: var(--lilas);
+    border-radius: 50px;
+    transition: width 0.3s ease;
+}
+
+.popup-progress-percent {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--petróleo);
+    min-width: 50px;
+    text-align: right;
+}
+
+.popup-content {
+    padding: var(--space-md) var(--space-lg);
+    overflow-y: auto;
+    flex: 1;
+}
+
+.popup-descricao {
+    font-size: var(--text-sm);
+    color: var(--petróleo);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+    padding: var(--space-sm);
+    background: var(--cinza-claro);
+    border-radius: var(--radius-md);
+}
+
+.popup-tarefas-titulo {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--petróleo);
+    margin-bottom: var(--space-sm);
+}
+
+.popup-tarefas-lista {
+    list-style: none;
+    margin-bottom: var(--space-md);
+}
+
+.tarefa-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(26, 47, 75, 0.1);
+}
+
+.tarefa-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #4CAF50;
+}
+
+.tarefa-texto {
+    flex: 1;
+    font-size: var(--text-sm);
+    color: var(--petróleo);
+    transition: var(--transition);
+}
+
+.tarefa-item.concluida .tarefa-texto {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.tarefa-excluir {
+    background: transparent;
+    border: none;
+    color: #e74c3c;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    transition: var(--transition);
+    font-weight: 700;
+}
+
+.tarefa-excluir:hover {
+    color: #c0392b;
+    transform: scale(1.1);
+}
+
+.popup-add-tarefa {
+    display: flex;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+}
+
+.popup-input-tarefa {
+    flex: 1;
+    padding: 10px var(--space-sm);
+    border: 2px solid var(--cinza-medio);
+    border-radius: 50px;
+    font-family: var(--font-main);
+    font-size: var(--text-sm);
+    color: var(--petróleo);
+    transition: var(--transition);
+}
+
+.popup-input-tarefa:focus {
+    border-color: var(--tecnológico);
+    outline: none;
+}
+
+.btn-add-tarefa {
+    background: var(--lilas);
+    color: var(--petróleo);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: var(--text-sm);
+    cursor: pointer;
+    font-family: var(--font-main);
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.btn-add-tarefa:hover {
+    background: #b7aaff;
+}
+
+.popup-footer {
+    padding: var(--space-md) var(--space-lg);
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: flex-end;
+    border-top: 1px solid rgba(26, 47, 75, 0.1);
+}
+
+.btn-excluir-projeto {
+    background: #e74c3c;
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: var(--text-sm);
+    cursor: pointer;
+    font-family: var(--font-main);
+    transition: var(--transition);
+}
+
+.btn-excluir-projeto:hover {
+    background: #c0392b;
+}
+
+.btn-fechar-popup {
+    background: var(--cinza-medio);
+    color: var(--petróleo);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 24px;
+    font-weight: 600;
+    font-size: var(--text-sm);
+    cursor: pointer;
+    font-family: var(--font-main);
+    transition: var(--transition);
+}
+
+.btn-fechar-popup:hover {
     background: #c9b3d3;
 }
 
@@ -539,6 +506,11 @@ footer {
     }
     
     .projeto-dia-header {
+        font-size: 1.1rem;
+        padding: var(--space-sm) var(--space-md);
+    }
+    
+    .popup-header-tag {
         font-size: 1.1rem;
         padding: var(--space-sm) var(--space-md);
     }

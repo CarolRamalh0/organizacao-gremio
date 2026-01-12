@@ -486,7 +486,7 @@ document.addEventListener('DOMContentLoaded', function() {
         btnCancelar.classList.add('hidden');
     }
 
-    // Fechar popup ao clicar no botão X
+    // Fechar popup quando clicar no botão X
     if (popupClose) {
         popupClose.addEventListener('click', () => {
             if (modoEdicao) {
